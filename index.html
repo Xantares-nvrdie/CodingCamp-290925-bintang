@@ -32,6 +32,12 @@
         <!-- Action Buttons -->
         <section class="flex gap-4 mt-2 justify-center items-center w-full">
             <button class="bg-violet-400 text-white w-[40%] border rounded-xl p-[8px] border-4 border-gray-900" onclick="deleteAll()">Delete All</button>
+            <!-- Dropdown Sort -->
+            <select id="sort-option" class="bg-sky-400 text-white w-[40%] border rounded-xl p-[8px] border-4 border-gray-900 text-center" onchange="sortTodos()">
+                <option value="none">Sort By</option>
+                <option value="task">Task (A-Z)</option>
+                <option value="dueDate">Due Date</option>
+            </select>
         </section>
         
         <!-- To Do List -->

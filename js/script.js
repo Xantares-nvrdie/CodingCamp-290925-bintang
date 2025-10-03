@@ -94,3 +94,16 @@ function editTodo(index) {
         alert("Invalid input. Task not updated.");
     }
 }
+
+//fungsi Filter/Sort
+function sortTodos() {
+    const sortOption = document.getElementById("sort-option").value;
+    if(sortOption === "task") {
+        // Urutkan berdasarkan nama task (A-Z)
+        todos.sort((a, b) => a.task.localeCompare(b.task));
+    }else if(sortOption === "dueDate") {
+        // Urutkan berdasarkan due date (lebih dekat dulu)
+        todos.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+    }
+    displayTodos(); // tampilkan ulang setelah diurutkan
+}
